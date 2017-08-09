@@ -24,10 +24,8 @@ public class HomeController {
         return "songform";
     }
     @PostMapping("/songform")
-    public String loadFormPage(@Valid @ModelAttribute("newSong") Song song,BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "songform";
-        }
+    public String loadFormPage(@ModelAttribute Song song) {
+
         return "confirmsong";
     }
 

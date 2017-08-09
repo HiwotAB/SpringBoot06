@@ -6,25 +6,25 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class Song {
-    @NotNull
+
     private long id;
-    @NotNull
+
     @NotEmpty(message = "Enter Name of Song ")
     private String names;
-    @NotNull
+
     @NotEmpty(message = "Enter the Number of Artist")
     private String artist;
-    @NotNull
+
     @NotEmpty(message = "Enter Album")
     private String album;
-    @NotNull
+
     @NotEmpty(message = "Enter the Rate")
-    @Size(min=1)
+
     private int rating;
 
-    @NotNull
+
     @NotEmpty(message = "Enter the Year")
-    @DateTimeFormat(pattern = "YYYY")
+
     private int year;
 
     public String getNames() {
