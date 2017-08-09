@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="css/songform.css" rel="stylesheet">
+        <title>Add Song Information</title>
+    </head>
+    <body>
+    <div class="transbox">
+        <div class="container" >
+    <!-- Form is used to help the user to insert there information and also has validation that tell the user the value they entered is correct or not -->
+        <h1>Song Registration Form</h1>
+        <form id="contactForm" action="#" th:action="@{/songform}" th:object="${song}" method="post">
+
+            <p>Enter Name:<input type="text" th:field="*{names}" />
+
+            </p>
+            <p>Enter Artist:<input type="text" th:field="*{artist}" />
+
+            </p>
+            <p>Enter Album:<input type="text" th:field="*{album}" />
+
+            </p>
+            <p>Enter Rating:<input type="text" th:field="*{rating}"  />
+
+            </p>
+            <p>Enter Year:<input type="text" th:field="*{year}" />
+
+            </p>
+            <p>
+                <input type="submit" value="Submit" />
+
+            </p>
+
+        </form>
+        </div>
+    </div>
+    </body>
+</html>

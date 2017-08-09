@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="css/confirmsong.css" rel="stylesheet">
+        <title>Song Confirmation</title>
+    </head>
+    <body>
+        <h1>Registered Songs Information Are:</h1>
+        <p th:inline="text">The Song Name was[[${song.names}]].<br />
+         The Artist Name is:[[${song.artist}]].<br />
+         The Album Name is :[[${song.album}]].<br />
+         The Rating was:[[${song.rating}]].<br />
+         The Year:[[${song.year}]].<br />
+        </p>
+        <p><a href="songform">Add More Song Info.</a></p>
+
+    </body>
+</html>
